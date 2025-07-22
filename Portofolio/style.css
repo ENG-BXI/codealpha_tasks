@@ -1,0 +1,953 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+    --main-color: #292F36;
+    --dark-green: #12F7D6;
+    --gray-text: #b2b4b7
+}
+
+.page {
+    height: 100vh;
+    width: 100vh;
+}
+
+#header {
+    background-color: var(--main-color);
+    font-family: "IBM Plex Mono", monospace;
+    display: flex;
+    justify-content: space-between;
+    width: inherit;
+    height: 20px;
+    padding: calc(64px / 3) calc(128px / 3);
+}
+
+#header #logo {
+    color: white;
+}
+
+#header #logo span {
+    margin-right: 5px;
+    color: var(--dark-green);
+    font-size: 20px;
+}
+
+#header #nav {
+    display: flex;
+    color: white;
+}
+
+#header #nav .nav-item {
+    margin: 0 14px;
+    font-size: 14px;
+}
+
+#header #nav .active {
+    color: var(--dark-green);
+}
+
+#bg-hr {
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+}
+
+#bg-hr #header-hr {
+    width: 90%;
+    height: .2px;
+    background-color: #3d4752;
+    margin: 30px 0;
+}
+
+/* hero start */
+#hero {
+    background-color: var(--main-color);
+    width: inherit;
+    height: calc(100vh - 63px);
+    display: flex;
+
+}
+
+#hero #bar-item-and-cart-info {
+    flex: 1;
+    display: flex;
+    margin-right: 75px;
+    justify-content: space-around;
+}
+
+#hero #bar-item-and-cart-info #bar-item {
+    border: solid white 1px;
+    height: min-content;
+    background-color: #1A1E23;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 6px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+#hero #bar-item-and-cart-info #bar-item .active {
+    background-color: white;
+    padding: 2px 5px 0 5px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+#hero #bar-item-and-cart-info #bar-item .icon-bar {
+    margin: 10px 0;
+}
+
+#hero #bar-item-and-cart-info #bar-item img {
+    width: 12px;
+    height: 12px;
+}
+
+#hero #bar-item-and-cart-info #bg-card-info {
+    border-top-left-radius: 102px;
+    border-bottom-right-radius: 102px;
+}
+
+#hero #bar-item-and-cart-info #bg-card-info #cart-info {
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+
+}
+
+
+#hero #bar-item-and-cart-info #bg-card-info {
+    border-top: 3px solid var(--dark-green);
+    border-left: 3px solid var(--dark-green);
+    height: min-content;
+    align-self: center;
+    /* padding: 0.2px; */
+}
+
+#hero #bar-item-and-cart-info #bg-card-info #cart-info {
+    padding: 20px 10px;
+    border: 3px white solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero #bar-item-and-cart-info #cart-info img {
+    height: 55px;
+    width: 55px;
+    margin-bottom: 5px;
+}
+
+#hero #bar-item-and-cart-info #cart-info #person-info {
+    font-family: "Ubuntu";
+    margin-bottom: 15px;
+}
+
+#hero #bar-item-and-cart-info #cart-info #person-info h3 {
+    color: white;
+    text-align: center;
+
+}
+
+#hero #bar-item-and-cart-info #cart-info #person-info code {
+    font-size: 10px;
+    font-weight: 300;
+
+    color: var(--gray-text);
+
+}
+
+#hero #bar-item-and-cart-info #cart-info #item-card {
+    margin-bottom: 5px;
+
+}
+
+#hero #bar-item-and-cart-info #cart-info #item-card .icon-item-cart {
+    display: flex;
+    margin: 5px 0;
+}
+
+#hero #bar-item-and-cart-info #cart-info #item-card .icon-item-cart img {
+    height: 10px;
+    width: 10px;
+    /* Change img color to main color for website (green)*/
+    margin-right: 5px;
+}
+
+#hero #bar-item-and-cart-info #cart-info #item-card .icon-item-cart code {
+    font-size: 10px;
+    color: var(--gray-text);
+
+}
+
+#hero #bar-item-and-cart-info #cart-info #tecno {
+    display: flex;
+    justify-content: space-around;
+
+    width: 100%;
+    margin-left: -10px;
+    margin-bottom: 20px;
+}
+
+#hero #bar-item-and-cart-info #cart-info #tecno code {
+    background-color: var(--dark-green);
+    padding: 0 7px;
+    font-size: 9px;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-family: "IBM Plex Mono", monospace;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+#hero #bar-item-and-cart-info #cart-info button {
+    padding: 7px 20px;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    align-self: start;
+    border-radius: 45px;
+    -webkit-border-radius: 45px;
+    -moz-border-radius: 45px;
+    -ms-border-radius: 45px;
+    -o-border-radius: 45px;
+    /*margin-bottom: 20px;
+    */
+
+}
+
+#hero #bar-item-and-cart-info #cart-info button h5 {
+    font-weight: 400;
+    margin-top: 3px;
+    margin-right: 10px;
+}
+
+#hero #bar-item-and-cart-info #cart-info button img {
+    height: 12px;
+    width: 12px;
+}
+
+/*
+
+
+
+hero title and p
+
+
+
+*/
+#hero #title-and-greet-hey {
+    flex: 1;
+
+}
+
+#hero #title-and-greet-hey h1 {
+    /* text-align: center; */
+    color: var(--dark-green);
+    font-family: Ubuntu;
+    text-transform: capitalize;
+    font-size: 65px;
+    font-weight: 400;
+    margin-bottom: 60px;
+
+}
+
+
+
+#hero #title-and-greet-hey #paragrph-one {
+    margin-bottom: 20px;
+}
+
+
+#hero #title-and-greet-hey .paragraph code {
+    color: var(--dark-green);
+    display: block;
+    font-size: 10px;
+}
+
+/* for two paragraph */
+#hero #title-and-greet-hey .paragraph pre,
+#hero #title-and-greet-hey #lets-talk {
+    margin-left: 15px;
+}
+
+#hero #title-and-greet-hey #paragrph-one pre {
+    color: white;
+    font-size: 37px;
+    font-family: "Ubuntu";
+    display: inline-block;
+
+}
+
+#hero #title-and-greet-hey #paragrph-one #end-code {
+    display: inline-block;
+}
+
+#hero #title-and-greet-hey #paragrph-two {
+    margin-bottom: 10px;
+}
+
+#hero #title-and-greet-hey #paragrph-two pre {
+    color: var(--gray-text);
+    font-size: 10px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+
+#hero #title-and-greet-hey #lets-talk {
+    display: flex;
+    align-items: center;
+}
+
+#hero #title-and-greet-hey #lets-talk h3 {
+    color: var(--dark-green);
+    font-size: 17px;
+    text-transform: capitalize;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+#hero #title-and-greet-hey #lets-talk img {
+    width: 15px;
+    height: 15px;
+    background-color: #43454D;
+    padding: 5px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+#hero #title-and-greet-hey #paragrph-one pre span {
+    color: var(--dark-green);
+}
+
+#hero #container-skills {
+    flex: 1;
+
+    align-self: center;
+}
+
+#hero #container-skills #cart-skills {
+    background-color: #1A1E23;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100px;
+    height: 200px;
+    padding: 15px;
+    margin-left: 50px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+#hero #container-skills #cart-skills .cart-skils-item {
+    display: flex;
+    align-items: center;
+    font-family: "IBM Plex Mono", monospace;
+
+}
+
+#hero #container-skills #cart-skills .cart-skils-item #number {
+    color: var(--dark-green);
+    font-size: 30px;
+    /* font-weight: 600; */
+    margin-right: 10px;
+}
+
+#hero #container-skills #cart-skills .cart-skils-item #skills {
+    font-size: 10px;
+    color: var(--gray-text);
+}
+
+/* hero End */
+/* About me start */
+#about-me {
+    background-image: url(assets/Image/About-bg.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+#about-me #container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+
+#about-me #container #about-me-and-info #about-me {
+    color: white;
+    border: 2px solid var(--dark-green);
+    width: min-content;
+    text-wrap: nowrap;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    font-family: "Ubuntu";
+    font-size: 40px;
+    padding: 10px 20px;
+    margin-bottom: 60px;
+
+}
+
+#about-me #container #about-me-and-info #info {
+    background-color: var(--main-color);
+    color: var(--gray-text);
+    font-family: "IBM Plex Mono", monospace;
+    width: 600px;
+    padding: 20px 30px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+#about-me #container #about-me-and-info #info code {
+    color: var(--dark-green);
+}
+
+#about-me #container #about-me-and-info #info h5 {
+    color: var(--dark-green);
+    font-size: 30px;
+    font-weight: 500;
+}
+
+
+#about-me #container #about-me-and-info #info p {
+    font-size: 12px;
+}
+
+#about-me #container #about-me-and-info #info p span {
+    color: var(--dark-green);
+}
+
+#about-me #container img {
+    height: 400px;
+}
+
+/* About me End */
+/* skills page End */
+#skills {
+    background-image: url(assets/Image/Skills.svg);
+    background-size: contain;
+    width: 100%;
+
+}
+
+#skills #container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+
+#skills #container #mouse-and-slash-icon {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+}
+
+#mouse-img {
+    width: 20px;
+    margin-bottom: 30px;
+}
+
+#skills #container #mouse-and-slash-icon h5 {
+    font-size: 140px;
+    color: var(--dark-green);
+    position: absolute;
+    right: 290px;
+    font-family: "Ubuntu";
+
+
+}
+
+#skills #container #skills-and-p-word {
+    text-align: center;
+}
+
+#skills #container #skills-and-p-word h5 {
+    color: var(--dark-green);
+    font-size: 40px;
+    font-family: "Ubuntu", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+}
+
+#skills #container #skills-and-p-word img {
+    width: 100px;
+}
+
+#skills #container #skills-and-p-word p {
+    color: var(--gray-text);
+    font-size: 14px;
+    font-family: "Ubuntu", monospace;
+    margin-bottom: 50px;
+}
+
+#skills #container #cards {
+    display: flex;
+    margin-bottom: 80px;
+}
+
+#skills #container #cards .card {
+    background-color: #98FAEC;
+    padding: 10px 20px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin: 0 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#skills #container #cards .card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -3px;
+    width: 5px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    height: 88px;
+    background-color: #28A9E0;
+}
+
+#skills #container #cards .card img {
+    width: 18px;
+    margin-bottom: 5px;
+
+}
+
+#skills #container #cards .card #pc {
+    margin-bottom: 10px;
+}
+
+#skills #container #cards .card h5 {
+    font-size: 18px;
+    font-family: "IBM Plex Mono", monospace;
+    color: #292F36;
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+
+#skills #container #cards .card h6 {
+    color: #43454D;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+#skills #container #tecno-circle {
+    display: flex;
+
+    text-align: center;
+}
+
+#skills #container #tecno-circle .tecno-circle-item {
+    margin: 0 50px;
+}
+
+#skills #container #tecno-circle .tecno-circle-item img {
+    padding: 30px;
+    height: 40px;
+    width: 40px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+#skills #container #tecno-circle #html {
+    --background: #E54F26;
+    color: var(--background);
+
+    img {
+        background-color: var(--background);
+    }
+}
+
+#skills #container #tecno-circle #css {
+    --background: #0C73B8;
+    color: var(--background);
+
+    img {
+        background-color: var(--background);
+
+    }
+}
+
+#skills #container #tecno-circle #js {
+    --background: #E7A020;
+    color: var(--background);
+
+    img {
+        background-color: var(--background);
+
+    }
+}
+
+#skills #container #tecno-circle #react {
+    --background: #28A9E0;
+    color: var(--background);
+
+    img {
+        background-color: var(--background);
+
+    }
+}
+
+#skills #container #tecno-circle .tecno-circle-item h5 {
+    font-size: 23px;
+    font-family: "IBM Plex Mono", monospace;
+}
+
+/* skills page End */
+
+/* Works page start */
+#works {
+    background-image: url(./assets/Image/Works.svg);
+    background-size: contain;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#works h5 {
+    color: var(--dark-green);
+    font-size: 45px;
+    font-family: "Ubuntu";
+    font-weight: 300;
+}
+
+#works p {
+    margin-top: 10px;
+    color: var(--gray-text);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 13px;
+}
+
+#works #dual-image-and-icon-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#works #dual-image-and-icon-row .icon {
+    background-color: var(--main-color);
+    padding: 10px 15px;
+    height: min-content;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+#works #dual-image-and-icon-row #dual-screen {
+    height: 340px;
+    width: 600px;
+    margin-top: 20px;
+}
+
+#works #dual-image-and-icon-row #next-icon {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+
+/* Works page End */
+
+/* blogs page start */
+#blogs {
+    background-color: var(--main-color);
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page #title {
+    color: var(--dark-green);
+    font-size: 45px;
+    font-family: "Ubuntu";
+    font-weight: 300;
+}
+
+.page #paragrph {
+    margin-top: 10px;
+    color: var(--gray-text);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 13px;
+
+}
+
+#blogs #white-line {
+    height: 1px;
+    width: 60%;
+    background-color: white;
+    margin: 40px 0;
+}
+
+#blogs .blog-paragraph {
+    display: flex;
+    width: 800px;
+}
+
+#blogs .blog-paragraph img {
+    height: 180px;
+    width: 180px;
+}
+
+#blogs .blog-paragraph #text-bloc {
+    margin-top: 15px;
+    margin-left: 40px;
+}
+
+#blogs .blog-paragraph #text-bloc h5 {
+    color: var(--dark-green);
+    font-size: 22px;
+    font-weight: 400;
+    font-family: "Ubuntu";
+
+}
+
+#blogs .blog-paragraph #text-bloc p {
+    color: var(--gray-text);
+    font-family: "Ubuntu";
+    font-size: 13px;
+    margin: 15px 0;
+}
+
+#blogs .blog-paragraph #text-bloc #read-more {
+    font-family: "Ubuntu";
+    color: var(--dark-green);
+    font-size: 15px;
+    border-bottom: 1px gray solid;
+    width: 80px;
+    text-wrap: nowrap;
+}
+
+#blogs .blog-paragraph #text-bloc #info-blog {
+    margin-top: 15px;
+    width: 330px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#blogs .blog-paragraph #text-bloc #info-blog #tec h6 {
+    background-color: #43454D;
+    color: rgb(194, 194, 194);
+    padding: 4px 6px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+#blogs .blog-paragraph #text-bloc #info-blog h6 {
+    color: white;
+    font-family: "Ubuntu";
+    font-weight: 400;
+
+}
+
+#blogs .blog-paragraph #text-bloc #info-blog h6 span {
+    margin-left: 5px;
+    color: var(--gray-text);
+}
+
+#blogs #view-and-subscribe-button {
+    display: flex;
+    width: 220px;
+    justify-content: space-between;
+}
+
+.button button {
+    border: none;
+    padding: 12px 20px;
+    font-family: "Ubuntu";
+    text-wrap: nowrap;
+    background-color: var(--dark-green);
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+
+#blogs #view-and-subscribe-button #subscribe button {
+    background-color: transparent;
+    color: white;
+    border: 1px var(--dark-green) solid;
+}
+
+/* blogs page End */
+
+/* content page start */
+#contact {
+    background-color: #1A1E23;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact #send-card-message {
+    color: var(--dark-green);
+    margin: 60px 0 40px 0;
+    font-size: 25px;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    border: var(--dark-green) 2px solid;
+    padding: 10px 25px;
+    text-transform: capitalize;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact form #name-and-email-field {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+#contact form #name-and-email-field div label,
+#contact form #message-field label {
+    display: block;
+    margin-bottom: 10px;
+    font-family: "Ubuntu";
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--dark-green);
+}
+
+.field input {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--dark-green);
+    margin-right: 20px;
+    color: var(--dark-green);
+
+}
+
+.field #name,
+.field #email {
+    width: 350px;
+}
+
+.field #message {
+    width: calc(350px *2 + 20px);
+    margin-bottom: 60px;
+}
+
+#contact form .button button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#contact form .button button img {
+    margin-left: 10px;
+    height: 17px;
+}
+
+/* content page End */
+/*  footer start */
+#home-page-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1A1E23;
+    color: var(--gray-text);
+    height: 50px;
+}
+
+#home-page-footer h6 {
+    font-size: 12px;
+    font-family: "Ubuntu";
+    font-weight: 400;
+
+}
+
+#home-page-footer h6 span a {
+    color: var(--dark-green);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#home-page-footer #Privacy-Policy-and-Terms {
+    display: flex;
+
+}
+
+#home-page-footer #Privacy-Policy-and-Terms h6 {
+    margin-left: 20px;
+}
+
+body hr {
+    height: 0.05mm;
+    background-color: #43454D;
+    border: none;
+}
+
+#home-page-footer #footer-icon #footer-icon-item {
+    background-color: var(--dark-green);
+    cursor: pointer;
+    padding: 5px;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+/*  footer end */
